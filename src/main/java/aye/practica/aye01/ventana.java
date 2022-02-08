@@ -78,10 +78,10 @@ public class ventana extends javax.swing.JFrame {
                             .addComponent(Hola_Label, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addGap(100, 100, 100))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addContainerGap()
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(Adios_BTN, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(195, 195, 195)))
-                .addContainerGap(52, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -113,10 +113,12 @@ public class ventana extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void Adios_BTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Adios_BTNActionPerformed
-        if(Hola_Label.isVisible()){
-            Hola_Label.setVisible(false);
+        if(Hola_Label.isVisible()){             
+        //Si el texto esta visible esconde la etiqueta y cambia el boton
+            Hola_Label.setVisible(false);      
             Adios_BTN.setText("HOLA");
         }else{
+            //Si el texto esta invisible muestra la etiqueta y cambia el boton
             Hola_Label.setVisible(true);
             Adios_BTN.setText("ADIOS");
         }
